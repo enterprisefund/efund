@@ -1,0 +1,41 @@
+<%- model_class = Pledge -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+</div>
+<table class="table table-striped">
+ <thead>
+    <tr>
+      <th>Project ID</th>
+      <th>Resources Committed</th>
+      <th>Funding Organization</th>
+      <th>Committed Date</th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+ <tbody>
+   <% @pledges.each do |pledge| %>
+      <tr>
+       <td><%= pledge.project_id %></td>
+    <td><%= pledge.hccommitted %></td>
+    <td><%= pledge.fundingorg %></td>
+    <td><%= pledge.commitdate%></td>
+   
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_pledge_path(pledge), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                       pledge_path(pledge),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_pledge_path,
+            :class => 'btn btn-primary' %>

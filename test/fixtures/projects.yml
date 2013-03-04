@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  description: MyString
+  hcneeded: 1
+  deadline: 1
+  requestingorg: MyString
+  userid: 1
+
+two:
+  title: MyString
+  description: MyString
+  hcneeded: 1
+  deadline: 1
+  requestingorg: MyString
+  userid: 1

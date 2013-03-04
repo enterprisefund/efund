@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Projectid: 1
+  hccommitted: 1
+  fundingorg: MyString
+  commitdate: MyString
+
+two:
+  Projectid: 1
+  hccommitted: 1
+  fundingorg: MyString
+  commitdate: MyString

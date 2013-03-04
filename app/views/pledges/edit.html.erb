@@ -1,0 +1,7 @@
+<%- model_class = Pledge -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human %></h1>
+</div>
+<%= render :partial => 'shared/error_messages_pledge' %>
+<%= render :partial => 'form' %>
+

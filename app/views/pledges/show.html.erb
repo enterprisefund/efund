@@ -1,0 +1,28 @@
+<%- model_class = Pledge -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+
+<dl class="dl-horizontal">
+  <dt><strong>Project ID:</strong></dt>
+  <dd><%= @pledge.project_id %></dd>
+  <dt><strong>Resources Committed:</strong></dt>
+  <dd><%= @pledge.hccommitted %></dd>
+  <dt><strong>Funding Organization:</strong></dt>
+  <dd><%= @pledge.fundingorg %></dd>
+  <dt><strong>Commit Date:</strong></dt>
+  <dd><%= @pledge.commitdate %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              pledges_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_pledge_path(@pledge), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              pledge_path(@pledge),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>

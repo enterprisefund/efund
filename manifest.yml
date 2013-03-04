@@ -1,0 +1,14 @@
+---
+applications:
+- name: fundit
+  framework: rails3
+  runtime: ruby193
+  memory: 256M
+  instances: 2
+  url: fundit.${target-base}
+  path: .
+  services:
+    mysql-3d968:
+      vendor: mysql
+      version: '5.1'
+      tier: free

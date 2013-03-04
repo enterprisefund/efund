@@ -1,0 +1,41 @@
+<%= form_for @pledge, :html => { :class => 'form-horizontal' } do |f| %>
+<div class="control-group">
+    <div class="control-label">Project ID</div>
+    <div class="controls">
+      <%= f.text_field :project_id, :class => 'text_field' %>
+    </div>
+  </div>
+<div class="control-group">
+    <div class="control-label">Resources Committed</div>
+    <div class="controls">
+      <%= f.text_field :hccommitted, :class => 'text_field' %>
+    </div>
+  </div>
+
+
+<div class="control-group">
+  <div class="control-label">Funding Organization</div>
+    <div class="controls">
+      <%= f.text_field :fundingorg, :class => 'text_field' %>
+    </div>
+  </div>
+
+
+<div class="control-group">
+    <div class="control-label">Commit Date</div>
+    <div class="controls">
+      <%= f.text_field :commitdate, :class => 'text_field' %>
+    </div>
+  </div>
+
+<div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                pledges_path, :class => 'btn' %>
+  </div>
+
+<% end %>
+
+
+
+
